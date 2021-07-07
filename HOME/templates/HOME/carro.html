@@ -1,0 +1,43 @@
+{% extends "HOME/layout.html" %}
+{% block body %}
+{%load static%}
+<section>
+    
+
+    <div class="card  border p-4 d-flex justify-content-center mb-4" >
+      <div class="card-header bg-white text-center py-3">
+        <h5 class="mb-0 fw-bold">MI CARRITO</h5>
+      </div>
+
+      <div class="card-body">
+        {% if request.session.carro.items %}
+          {% for key, value in request.session.carro.items%}
+          <ul>
+            <li><strong>{{value.cantidad}} - {{value.nombre}}: </strong>{{value.descripcion}}, ${{value.precio}}</li>
+          </ul>
+          {% endfor %}
+        {% else %}
+          <ul>
+            <li><strong>No hay productos en el carro.</li>
+          </ul>
+        {% endif %}
+      </div>
+
+      <div
+           class="card-footer bg-white d-flex justify-content-between py-3"
+           >
+        <strong>Total amount:</strong>
+        <strong>$ {{importe_total_carro}}</strong>
+      </div>
+    </div>
+  </section>
+  <!--Section: Summary-->
+  
+  <button type="button" class="btn btn-success btn-block mb-4" style="margin-top: 10px;">
+    CONFIRMAR PEDIDO
+  </button>
+</div>
+</div>
+
+</section>
+{% endblock %}

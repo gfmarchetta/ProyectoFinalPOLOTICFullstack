@@ -1,0 +1,64 @@
+{% extends "HOME/layout.html" %}
+{% block body %}
+{%load static%}
+<section>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100" style="width: 70%;">
+                <img src="https://picsum.photos/id/1024/320/240" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">VER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" style="width: 70%;">
+                <img src="https://picsum.photos/id/1074/320/240" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">VER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mx-auto">
+            <div class="card h-100" style="width: 70%;">
+                <img src="https://picsum.photos/id/219/320/240" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">VER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="pt-3 pb-4">
+        <ul class="list-group list-group-horizontal-xxl">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "HOME/layout.html" %}
+{% block body %}
+{%load static%}
+
+<section>
+    <h1 class="text-center">Nuevo Producto</h1>
+    <div class="container-sm" style="padding-top: 30px;padding-right: 200px;padding-left: 200px;padding-bottom: 100px;border-top-width: 10px;">
+        
+            
+            <form class="row g-2">
+
+            <div class="form-outline mb-4">
+                <input type="text" id="form4Example1" class="form-control">
+                <label class="form-label" for="form4Example1" style="margin-left: 0px;">Titulo</label>
+              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
+                
+            <div class="col-sm-6">
+                <div class="form-file mb-4">
+                    <input type="file" class="form-control" id="customFile">
+                  </div>
+            
+            
+            
+            <div class="form-outline mb-4">
+                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                <label class="form-label" for="form4Example3" style="margin-left: 0px;">Descripcion</label>
+              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
+
+            
+             <div class="col-12">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>CATEGORIA</option>
+                        {% for cat in producto %}
+                        <option>{{cat}}</option>
+                        {% endfor %}
+                      </select>
+                    </form>
+                  </div>
+            </div>
+
+            
+              
+            
+
+            <div class="col-md-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Precio: </span>
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+            </div>
+
+            <div class="input-group">
+                <button class="btn btn-secondary btn-sm" type="button" id="inputGroupFileAddon04">CREAR</button>
+            </div>         
+
+            
+        </form>
+
+    </div>
+</section>
+
+
+
+{% endblock %}

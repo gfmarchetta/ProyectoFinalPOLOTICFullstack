@@ -1,0 +1,30 @@
+{% extends "HOME/layout.html" %}
+{% block body %}
+{%load static%}
+<h1>Resultados</h1>
+<section>
+    <p>Estas buscando: <strong>{{query}}</strong></p>
+    {% if articulos %}
+            <p>Productos encontrados: {{articulos | length}} productos</p>
+            <div class="pt-3 pb-4">
+                {% for articulo in articulos %}
+                <ul class="list-group list-group-horizontal-xxl">
+                    <li class="list-group-item"><a href="{% url 'producto' articulo.id %}">#{{articulo.id}}</a> -
+                        {{articulo.titulo}} : {{articulo.descripcion}} - {{articulo.categoria}}</li>
+                </ul>
+                {% endfor %}
+    {% else %}
+            <p>No se encontraron resultados</p>
+    {% endif %}
+    </div>
+
+
+    <!--<div class="pt-3 pb-4">
+            {% for producto_1 in lista_productos %}
+        <ul class="list-group list-group-horizontal-xxl">
+            <li class="list-group-item"><a href="{% url 'producto' producto_1.id %}">#{{producto_1.id}}</a> - {{producto_1.titulo}} : {{producto_1.descripcion}} - {{producto_1.categoria}}</li>
+        </ul>
+        {% endfor %}
+    </div>-->
+</section>
+{% endblock %}
